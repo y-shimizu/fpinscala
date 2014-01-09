@@ -1,3 +1,4 @@
+#
 apply{
     plugin 'scala'
     plugin 'idea'
