@@ -4,8 +4,8 @@ apply{
 }
 
 ext {
-    scalaVersion = '2.10'
-    spec2Version = '2.2'
+    scalaVersion = '2.11'
+    spec2Version = '2.3.12'
 }
 
 repositories {
