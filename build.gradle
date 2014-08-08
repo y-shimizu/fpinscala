@@ -1,4 +1,4 @@
-apply{
+apply {
     plugin 'scala'
     plugin 'idea'
 }
@@ -13,7 +13,7 @@ repositories {
 }
 
 tasks.withType(ScalaCompile) {
-    scalaCompileOptions.useCompileDaemon = false
+    scalaCompileOptions.useCompileDaemon = true
     scalaCompileOptions.useAnt = false
 }
 
@@ -21,3 +21,4 @@ dependencies {
     compile "org.scala-lang:scala-library:$scalaVersion.0"
     testCompile "org.specs2:specs2_$scalaVersion:$spec2Version"
 }
+

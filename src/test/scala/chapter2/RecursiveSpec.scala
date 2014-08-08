@@ -21,4 +21,31 @@ class RecursiveSpec extends SpecificationWithJUnit {
     }
   }
 
+  //Exercise 3
+  "curry" should {
+    "return curry function" in {
+      val f = (a: Int) => (b: Double) => a * b
+      val g = (a: Int, b: Double) => a * b
+      Recursive.curry(g)(1)(2) must_== f(1)(2)
+    }
+  }
+
+  //Exercise 4
+  "uncurry" should {
+    "return uncurry function" in {
+      val f = (a: Int) => (b: Double) => a * b
+      val g = (a: Int, b: Double) => a * b
+      Recursive.uncurry(f)(1, 2.0) must_== g(1, 2.0)
+    }
+  }
+
+  //Exercise 5
+  "compose" should {
+    "return uncurry function" in {
+      val f = (a: Double) => a.toString
+      val g = (a: Int) => a.toDouble
+      Recursive.compose(f, g)(3) must_== f(g(3))
+    }
+  }
+
 }
